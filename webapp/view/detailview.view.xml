@@ -1,0 +1,33 @@
+<mvc:View controllerName="miningproject.suryasprint.controller.detailview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+    <Page id="idDetail" title="Detail view">
+	<content>	
+			<f:SimpleForm editable="true">
+			<Label text="unique identifier"></Label>
+<Text text="{MiningModel>LocId}" id="idLoca"></Text>
+<Label text="currency key"></Label>
+<Text text="{MiningModel>Currency}" id="idgDesc"></Text>
+<Label text="Number of drills"></Label>
+<Text text="{MiningModel>DrillN}" id="idMineral"></Text>
+<Label text="type of mineral"></Label>
+<Text text="{MiningModel>LMineral}" id="idREp"></Text>
+<Label text="Description"></Label>
+<Text text="{MiningModel>LDesc}" id="idgDesc2"></Text>
+<Label text="brief report of mine"></Label>
+<Text text="{MiningModel>Report}" id="idMineral2"></Text>
+<Label text="Currency"></Label>
+<Text text="{MiningModel>LCost}" id="idREp2"></Text>
+
+
+
+
+
+<Button text="Edit" width="180px" press="onEdit"></Button>
+
+
+</f:SimpleForm>
+		</content>
+		
+	</Page>
+</mvc:View>

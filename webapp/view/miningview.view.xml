@@ -1,0 +1,85 @@
+<mvc:View controllerName="miningproject.suryasprint.controller.miningview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+     
+    <subHeader>
+            <OverflowToolbar>
+                <SearchField search="onSearch" liveChange="onSearch"/>
+            </OverflowToolbar>
+        </subHeader>
+
+            <Table id="idListCtrl" items="{MiningModel>/results}" mode="SingleSelectMaster" selectionChange="onRowSelection">
+        <columns>
+           <Column>
+            <Text text="{i18n>Location Id}"></Text>
+           </Column>
+ 
+          
+           <Column >
+            <Text text="{i18n>Currency}"></Text>
+           </Column>
+ 
+           <Column >
+            <Text text="{i18n>Drill}"></Text>
+           </Column>
+ 
+           <Column >
+            <Text text="{i18n>Mineral}"></Text>
+           </Column>
+
+           <Column >
+            <Text text="{i18n>Description}"></Text>
+           </Column>
+
+           <Column >
+            <Text text="{i18n>Report}"></Text>
+           </Column>
+
+           <Column >
+            <Text text="{i18n>Cost}"></Text>
+           </Column>
+
+          
+ 
+        </columns>
+ 
+        <ColumnListItem >
+        <cells>
+        <Text text="{MiningModel>LocId}"></Text>
+       
+        <Text text="{MiningModel>Currency}"></Text>
+        <Text text="{MiningModel>DrillN}"></Text>
+        <Text text="{MiningModel>LMineral}"></Text>
+        <Text text="{MiningModel>LDesc}"></Text>
+        <Text text="{MiningModel>Report}"></Text>
+        <Text text="{MiningModel>LCost}"></Text>
+
+        
+		 <Button icon="sap-icon://delete" press="onDelete"></Button>
+        </cells>
+       
+        </ColumnListItem>
+       
+     
+     </Table>
+			<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="Create" press="onCreate"/>
+				
+			</OverflowToolbar>
+		</footer>
+         
+    </Page>
+</mvc:View>
+
+
+
+
+
+   
+
+
+
+
