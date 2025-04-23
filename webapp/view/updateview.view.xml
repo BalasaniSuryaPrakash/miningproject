@@ -5,18 +5,29 @@
 	<content>	
 			<f:SimpleForm editable="true" >
 
-<Label text="Location Id" required="true"></Label>
-<Input id="idlUp" value="{MiningModel>LocationId}" width="250px"></Input>
+<Label text="unique identifier" required="false"></Label>
+<Input enabled="false" id="idlUp" value="{MiningModel>LocId}" width="250px"></Input>
 
 
-<Label text="Location Description"></Label>
-<Input id="idUpdes" value="{MiningModel>LocDesc}" width="180px"></Input>
+<Label text="currency key" required="false"></Label>
+<Input id="idUpCurKey" value="{MiningModel>Currency}" width="180px"></Input>
 
-<Label text="Mineral found"></Label>
-<Input id="idUpmin" value="{MiningModel>Mineral}" width="180px"></Input>
+<Label text="Number of drills"></Label>
+<Input id="idUpDri" value="{MiningModel>DrillN}" width="180px"></Input>
 
-<Label text="Report"></Label>
+<Label text="Mineral"></Label>
+<Input id="idUpMin" value="{MiningModel>LMineral}" width="180px"></Input>
+
+
+
+<Label text="type of mineral"></Label>
 <Input id="idUprep" value="{MiningModel>Report}" width="180px"></Input>
+
+<Label text="Description"></Label>
+<Input id="idUpdesc" value="{MiningModel>LDesc}" width="180px"></Input>
+
+<Label text="Cost"></Label>
+<Input id="idUpCos" value="{MiningModel>LCost}" width="180px"></Input>
 
 
 <Button text="Submit" width="180px" press="onUpdate"></Button>

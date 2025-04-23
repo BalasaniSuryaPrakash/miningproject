@@ -17,30 +17,37 @@ sap.ui.define([
                     onSubmit:function(){
                       
             
-                            //payload
+                            
                             let oLocId=this.getView().byId("idLoc")
-                            let oDesc=this.getView().byId("idDesc")
+                            let oCurrk=this.getView().byId("idCurrk")
                            
+                            let oDrill=this.getView().byId("idDrill")
                             let oMin=this.getView().byId("idMin")
-                            let oRep=this.getView().byId("idRep")
-                
+                            let oDesc=this.getView().byId("idDesc")   
+                            let oRep=this.getView().byId("idRep")  
+                            let oCur=this.getView().byId("idCur")
                             let sLocId=oLocId.getValue()
                             //sCarrId=sCarrId.toUpperCase()
-                            let sDesc=oDesc.getValue()
-                           
+                            
+                            let sCurrk=oCurrk.getValue()
+                           let sDesc=oDesc.getValue()
+                            let sDrill=oDrill.getValue()
                             let sMin=oMin.getValue()
                             let sRep=oRep.getValue()
-                
+                            let sCur=oCur.getValue()
                             // let vDate=new Date(sFld).getTime()
                 
                             // let fDate="\/Date("+vDate+")\/"
                 
                             let payLoad={
-                                "LocationId":sLocId,
-                            
-                                "LocDesc":sDesc,
-                                "Mineral":sMin,
-                                "Report":sRep
+                                "LocId":sLocId,
+                                "Currency":sCurrk,
+                                "DrillN":sDrill,
+                                "LMineral":sMin,
+                                "LDesc":sDesc,
+                                "Report":sRep,
+                                "LCost":sCur
+
                             }
                 
                 

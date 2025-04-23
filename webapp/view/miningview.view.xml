@@ -9,7 +9,7 @@
             </OverflowToolbar>
         </subHeader>
 
-            <Table id="idListCtrl" items="{MiningModel>/results}" mode="SingleSelectMaster" selectionChange="onRowSelection">
+            <Table id="idListCtrl1" items="{MiningModel>/}" mode="SingleSelectMaster" selectionChange="onRowSelection">
         <columns>
            <Column>
             <Text text="{i18n>Location Id}"></Text>
@@ -38,6 +38,9 @@
 
            <Column >
             <Text text="{i18n>Cost}"></Text>
+           </Column>
+           <Column >
+            <Text text="Action"></Text>
            </Column>
 
           

@@ -23,7 +23,7 @@ sap.ui.define([
                     success:(odata,resp)=>{
     
                         let JModel=this.getOwnerComponent().getModel("MiningModel")
-                        JModel.setData(odata)
+                        JModel.setData(odata.results)
                         // let oModelJs=new sap.ui.model.json.JSONModel(odata)
                         // this.getView().setModel(oModelJs,"MiningModel")
                         

@@ -21,33 +21,52 @@ sap.ui.define([
 
         onUpdate:function(){
           
-
-                //payload
+                
                 let oLocId=this.getView().byId("idlUp")
-
-                let oDesc=this.getView().byId("idUpdes")
-               
-                let oMin=this.getView().byId("idUpmin")
-
-                let oRep=this.getView().byId("idUprep")
+                let oCurKey=this.getView().byId("idUpCurKey")
+                let oDrill=this.getView().byId("idUpDri")
+                let oMin=this.getView().byId("idUpMin")
+                let oRep=this.getView().byId("idUprep")  
+                let oDesc = this.getView().byId("idUpdesc")  
+                let oCos=this.getView().byId("idUpCos")
     
+
                 let sLocId=oLocId.getValue()
-                //sCarrId=sCarrId.toUpperCase()
-                let sDesc=oDesc.getValue()
-               
+                let sCurKey=oCurKey.getValue()
+                let sDrill=oDrill.getValue()
                 let sMin=oMin.getValue()
                 let sRep=oRep.getValue()
+                let sDesc=oDesc.getValue()
+                let sCos=oCos.getValue()
+
     
                 // let vDate=new Date(sFld).getTime()
     
                 // let fDate="\/Date("+vDate+")\/"
+
+
+                // {
+
+                //     "LocId" : "0000001067",
+                //     "Currency" : "USD",
+                //     "DrillN" : "2",
+                //     "LMineral" : "SILVER",
+                //     "LDesc" : "WESTERN RIDGE2",
+                //     "Report" : "PURE SILVER DEPOSITS, PROMISING HIGH RETURNS ON INVESTMENT.",
+                //     "LCost" : "300000.00"
+                
+                
+                // }
     
                 let payLoad={
                     
-                    
-                    "LocDesc":sDesc,
-                    "Mineral":sMin,
-                    "Report":sRep
+                    "DrillN":sDrill,
+                    "LMineral":sMin,
+                    "LDesc":sDesc,
+                    "Report":sRep,
+                    "LCost":sCos
+                    //  "LMineral":sMin,
+                    //  "Report":sRep
                 }
     
     
@@ -57,18 +76,18 @@ sap.ui.define([
                     
                 //get entity
 
-                let entity=`/SprintProjectSet('${sLocId}')`;
-               
+                //            /SprintProjectSet(LocId='0000001004',Currency='USD')
+                let entity = "/SprintProjectSet(LocId='"+ sLocId +"')"
     
              
                 //method
               let that=this
                 oModel.update(entity,payLoad,{
                     success:function(){
-                        MessageBox.success("record update",{
+                        MessageBox.success("record updated",{
                             onClose:function(){
-                                var oRouter=that.getRouter()
-                oRouter.navTo("RouteMiningview")
+                                let oRouter=that.getOwnerComponent().getRouter();
+                                oRouter.navTo("RouteMiningview")
                
                 
                             }.bind(that)

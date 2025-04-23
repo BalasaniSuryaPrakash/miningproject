@@ -1,23 +1,28 @@
-<mvc:View controllerName="miningproject.suryasprint.controller.miningview"
+<mvc:View controllerName="miningproject.suryasprint.controller.createview"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m" xmlns:f="sap.ui.layout.form">
     <Page id="idCreate" title="Create new mining record">
 	<content>	
 			<f:SimpleForm >
 
-<Label text="Location Id"></Label>
+<Label required="true" text="Location Id"></Label>
 <Input id="idLoc" width="250px"></Input>
 
 
-<Label text="Location Description"></Label>
-<Input id="idDesc" width="180px"></Input>
-<Label text="Mineral found"></Label>
-<Input id="idMin" width="180px"></Input>
-<Label text="Report"></Label>
-<Input id="idRep" width="180px"></Input>
+<Label required="true" text="currency key for min"></Label>
+<Input id="idCurrk" width="250px"></Input>
+<Label required="true" text="Number of drills"></Label>
+<Input id="idDrill" width="250px"></Input>
+<Label required="true" text="type of mineral "></Label>
+<Input id="idMin" width="250px"></Input>
+<Label required="true" text="location description"></Label>
+<Input id="idDesc" width="250px"></Input>
+<Label required="true" text="brief report"></Label>
+<Input id="idRep" width="250px"></Input>
+<Label required="true" text="Currency"></Label>
+<Input id="idCur" width="250px"></Input>
 
-
-<Button text="Submit" width="180px" press="onSubmit"></Button>
+<Button text="Submit" width="250px" press="onSubmit"></Button>
 
 
 </f:SimpleForm>
